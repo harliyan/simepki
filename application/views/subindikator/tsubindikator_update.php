@@ -1,0 +1,16 @@
+<form action="<?php echo $action; ?>" method="post">
+    <div class="form-group mt-2">
+        <label for="varchar">Kdindikator <?php echo form_error('kdsubindikator') ?></label>
+        <input type="text" class="form-control" name="kdindikator" id="kdindikator" placeholder="Kdindikator" value="<?php echo $kdindikator; ?>" readonly />
+    </div>
+    <div class="form-group mt-2">
+        <label for="subindikator">Indikator <?php echo form_error('indikator') ?></label>
+        <textarea class="form-control" rows="3" name="indikator" id="indikator" placeholder="indikator"><?php echo $indikator; ?></textarea>
+    </div>
+    <div class="form-group mt-2 mb-4">
+        <input type="text" class="form-control" name="date_created" id="date_created" placeholder="Date Created" value="<?php echo date("Y-m-d h:i:s") ?>" hidden />
+    </div>
+    <input type="hidden" name="id" value="<?php echo $id; ?>" />
+    <button type="submit" class="btn btn-primary"><?php echo $button ?></button>
+    <a href="<?php echo site_url('insubindikator') ?>" class="btn btn-default">Cancel</a>
+</form>
